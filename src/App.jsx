@@ -7,11 +7,12 @@ import OndeEstamos from './pages/OndeEstamos'
 import Precarios from './pages/Precarios'
 import Contactos from './pages/Contactos'
 import CafSantaMaria from './pages/CafSantaMaria'
+import LogotipoImage from './assets/Logotipo.png'
 import './App.css'
 
 function App() {
-  // Você pode substituir este logo pelo seu próprio logo
-  const logoUrl = "/vite.svg"; // Substitua pelo caminho do seu logo
+  // Logotipo oficial do CAFBYGRANDESABIO
+  const logoUrl = LogotipoImage;
 
   return (
     <Router basename="/cafbygrandesabio">

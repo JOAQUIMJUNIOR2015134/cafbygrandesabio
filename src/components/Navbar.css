@@ -24,9 +24,14 @@
 }
 
 .logo-image {
-  height: 50px;
+  height: 60px;
   width: auto;
   object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
 }
 
 /* Navigation Menu */
