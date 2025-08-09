@@ -1,0 +1,67 @@
+/* Responsive Grid Styles */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    padding: 0 15px !important;
+  }
+
+  h2 {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+    padding: 0 10px !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+    margin-bottom: 30px !important;
+  }
+
+  section {
+    padding: 40px 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.8rem !important;
+    margin-bottom: 25px !important;
+  }
+
+  section {
+    padding: 30px 10px !important;
+  }
+}
+
+/* Specific responsive styles for hero sections */
+.hero-content {
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}

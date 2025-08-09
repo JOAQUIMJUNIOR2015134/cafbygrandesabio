@@ -4,6 +4,7 @@ import ReusableCard from '../components/ReusableCard';
 import PausaFeriasLectivas from '../components/PausaFeriasLectivas';
 import EscolasServico from '../components/EscolasServico';
 import ContactForm from '../components/ContactForm';
+import '../styles/ResponsiveGrid.css';
 
 const CafSantaMaria = () => {
   const navigate = useNavigate();
@@ -39,8 +40,8 @@ const CafSantaMaria = () => {
           gridTemplateColumns: 'repeat(4, 1fr)', 
           gap: '20px', 
           maxWidth: '1200px', 
-          margin: '0 auto' 
-        }}>
+          margin: '0 auto'
+        }} className="services-grid">
           
           <ReusableCard
             title="📅 Nossa Experiência"
@@ -63,25 +64,6 @@ const CafSantaMaria = () => {
           />
 
         </div>
-        
-        {/* CSS responsivo inline para tablets e mobile */}
-        <style jsx>{`
-          @media (max-width: 1024px) {
-            .services-grid {
-              grid-template-columns: repeat(2, 1fr) !important;
-              gap: 20px !important;
-              padding: 0 15px !important;
-            }
-          }
-          
-          @media (max-width: 768px) {
-            .services-grid {
-              grid-template-columns: 1fr !important;
-              gap: 15px !important;
-              padding: 0 10px !important;
-            }
-          }
-        `}</style>
       </section>
 
       {/* Componente Pausa e Férias Lectivas */}

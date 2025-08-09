@@ -98,23 +98,23 @@
   .google-maps-container {
     padding: 30px 15px;
   }
-  
+
   .maps-title {
     font-size: 1.8rem;
   }
-  
+
   .map-container {
     height: 300px;
   }
-  
+
   .info-card {
     padding: 20px;
   }
-  
+
   .info-card h4 {
     font-size: 1.1rem;
   }
-  
+
   .info-card p {
     font-size: 0.9rem;
   }
@@ -124,21 +124,21 @@
   .google-maps-container {
     padding: 20px 10px;
   }
-  
+
   .maps-title {
     font-size: 1.5rem;
   }
-  
+
   .map-container,
   .streetview-container {
     height: 250px;
   }
-  
+
   .map-section,
   .streetview-section {
     padding: 15px;
   }
-  
+
   .info-card {
     padding: 15px;
   }

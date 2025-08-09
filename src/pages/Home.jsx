@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection';
 import CafInfoCard from '../components/CafInfoCard';
 import ReusableCard from '../components/ReusableCard';
 import ContactForm from '../components/ContactForm';
+import '../styles/ResponsiveGrid.css';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -55,16 +56,7 @@ const Home = () => {
         <h2 style={{ textAlign: 'center', marginBottom: '40px', color: '#2c3e50', fontSize: '2.5rem' }}>
           Nossos Serviços
         </h2>
-        <div 
-          className="services-grid"
-          style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(4, 1fr)', 
-            gap: '20px', 
-            maxWidth: '1200px', 
-            margin: '0 auto' 
-          }}
-        >
+        <div className="services-grid">
           <ReusableCard
             image="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2022&q=80"
             title="CAF_Santa Maria da Feira"
@@ -105,49 +97,6 @@ const Home = () => {
             onButton2Click={() => handleCardButton2('GPS_Gosto pelo Saber')}
           />
         </div>
-        
-        {/* CSS responsivo inline para tablets e mobile */}
-        <style jsx>{`
-          @media (max-width: 1024px) {
-            .services-grid {
-              grid-template-columns: repeat(2, 1fr) !important;
-              gap: 20px !important;
-              padding: 0 15px !important;
-            }
-            
-            h2 {
-              font-size: 2.2rem !important;
-            }
-          }
-          
-          @media (max-width: 768px) {
-            .services-grid {
-              grid-template-columns: 1fr !important;
-              gap: 20px !important;
-              padding: 0 10px !important;
-            }
-            
-            h2 {
-              font-size: 2rem !important;
-              margin-bottom: 30px !important;
-            }
-            
-            section {
-              padding: 40px 15px !important;
-            }
-          }
-          
-          @media (max-width: 480px) {
-            h2 {
-              font-size: 1.8rem !important;
-              margin-bottom: 25px !important;
-            }
-            
-            section {
-              padding: 30px 10px !important;
-            }
-          }
-        `}</style>
       </section>
 
       {/* Formulário de Contacto */}
