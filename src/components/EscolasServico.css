@@ -1,0 +1,197 @@
+/* Escolas Serviço Component Styles */
+
+.escolas-servico-section {
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.escolas-servico-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.escolas-servico-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.escolas-servico-subtitle {
+  font-size: 1.2rem;
+  color: #5a6c7d;
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.escolas-servico-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Estilização específica para informações das escolas */
+.escola-info {
+  text-align: left;
+}
+
+.escola-info h4 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin: 20px 0 10px 0;
+  font-weight: 600;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+}
+
+.escola-info h4:first-child {
+  margin-top: 0;
+}
+
+.horario-section p {
+  margin: 5px 0;
+  color: #5a6c7d;
+  font-size: 0.95rem;
+}
+
+.morada-section {
+  text-align: center;
+}
+
+.morada-section p {
+  margin: 10px 0;
+  color: #5a6c7d;
+  font-size: 0.95rem;
+}
+
+.google-maps-btn {
+  display: inline-block;
+  margin: 20px auto 0 auto;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 120px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+.google-maps-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.google-maps-btn:hover::before {
+  left: 100%;
+}
+
+.google-maps-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+/* Responsive Design */
+/* Responsive Design otimizado para grid de 4 colunas */
+@media (max-width: 1200px) {
+  .escolas-servico-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .escolas-servico-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .escolas-servico-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .escolas-servico-title {
+    font-size: 2.2rem;
+  }
+
+  .escolas-servico-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .escolas-servico-section {
+    padding: 60px 15px;
+  }
+
+  .escolas-servico-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .escolas-servico-title {
+    font-size: 2rem;
+  }
+
+  .escolas-servico-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .escola-info h4 {
+    font-size: 1rem;
+  }
+
+  .horario-section p,
+  .morada-section p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .escolas-servico-section {
+    padding: 40px 10px;
+  }
+
+  .escolas-servico-title {
+    font-size: 1.8rem;
+  }
+
+  .escolas-servico-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .google-maps-btn {
+    font-size: 12px;
+    padding: 10px 20px;
+    min-width: 100px;
+  }
+}

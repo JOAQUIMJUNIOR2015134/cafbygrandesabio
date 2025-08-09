@@ -1,0 +1,177 @@
+/* CAF Info Card Styles */
+.caf-info-section {
+  padding: 60px 20px;
+}
+
+.caf-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.caf-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.caf-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 400px;
+}
+
+.caf-content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.caf-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+}
+
+.caf-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.caf-description {
+  color: #5a6c7d;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.caf-description p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.caf-description strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.caf-activities {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.caf-activities li {
+  position: relative;
+  padding: 8px 0 8px 25px;
+  margin-bottom: 8px;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.caf-activities li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .caf-card {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .caf-content {
+    padding: 30px 25px;
+  }
+
+  .caf-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .caf-image {
+    min-height: 250px;
+  }
+
+  .caf-info-section {
+    padding: 40px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .caf-content {
+    padding: 25px 20px;
+  }
+
+  .caf-title {
+    font-size: 1.8rem;
+  }
+
+  .caf-description {
+    font-size: 0.95rem;
+  }
+
+  .caf-activities li {
+    padding-left: 20px;
+    font-size: 0.9rem;
+  }
+
+  .caf-activities li::before {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+  }
+}
+
+/* Alternative layout (image on right) */
+.caf-card.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.caf-card.reverse .caf-image-container {
+  order: 2;
+}
+
+.caf-card.reverse .caf-content {
+  order: 1;
+}
+
+@media (max-width: 768px) {
+  .caf-card.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .caf-card.reverse .caf-image-container,
+  .caf-card.reverse .caf-content {
+    order: initial;
+  }
+}

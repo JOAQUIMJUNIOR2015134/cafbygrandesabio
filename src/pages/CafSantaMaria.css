@@ -1,0 +1,327 @@
+/* CAF Santa Maria da Feira Page Styles */
+
+.caf-santa-maria-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.caf-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  gap: 60px;
+}
+
+.caf-hero-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.caf-hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.caf-hero-subtitle {
+  font-size: 1.2rem;
+  color: #5a6c7d;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.caf-hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.caf-hero-image {
+  flex: 1;
+  max-width: 500px;
+}
+
+.caf-hero-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.caf-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.caf-btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.caf-btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.caf-btn-secondary {
+  background-color: transparent;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.caf-btn-secondary:hover {
+  background-color: #3498db;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.caf-btn-large {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  background-color: #e74c3c;
+  color: white;
+}
+
+.caf-btn-large:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Details Section */
+.caf-details {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.caf-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.caf-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.caf-section-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.caf-subsection-title {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin: 30px 0 20px 0;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.caf-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #5a6c7d;
+  margin-bottom: 20px;
+}
+
+/* Schedule */
+.caf-schedule {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
+
+.schedule-day {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.schedule-time {
+  color: #5a6c7d;
+  font-weight: 500;
+}
+
+/* Location */
+.caf-location {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #e74c3c;
+}
+
+.caf-location p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+/* Activities Grid */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.activity-card {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.activity-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.activity-card h4 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.activity-card p {
+  font-size: 0.95rem;
+  color: #5a6c7d;
+  line-height: 1.4;
+}
+
+/* Enrollment Section */
+.caf-enrollment-section {
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 60px 40px;
+  border-radius: 12px;
+  border: 2px solid #e9ecef;
+}
+
+.enrollment-text {
+  font-size: 1.2rem;
+  color: #5a6c7d;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .caf-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .caf-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .caf-details-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .caf-hero {
+    padding: 40px 20px;
+  }
+
+  .caf-hero-title {
+    font-size: 2rem;
+  }
+
+  .caf-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .caf-hero-buttons {
+    justify-content: center;
+  }
+
+  .caf-hero-img {
+    height: 300px;
+  }
+
+  .caf-section-title {
+    font-size: 2rem;
+  }
+
+  .caf-details {
+    padding: 40px 0;
+  }
+
+  .caf-enrollment-section {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .caf-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .caf-hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .caf-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .activity-card {
+    padding: 20px;
+  }
+
+  .schedule-item {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+}
