@@ -1,17 +1,20 @@
 # CAF BY GRANDESABIO
 
 ## Descrição
+
 Website institucional para o Centro de Actividades de Férias (CAF) da GRANDESABIO em Santa Maria da Feira. Este projeto foi desenvolvido com React e Vite, proporcionando uma experiência moderna e responsiva para famílias que procuram serviços educativos de qualidade para os seus filhos.
 
 ## Características Principais
 
 ### 🏫 Serviços CAF
+
 - Acompanhamento educativo para crianças dos 6 aos 12 anos (1º Ciclo)
 - Atividades de férias durante pausas letivas
 - Apoio às famílias com horários flexíveis
 - Presença em 34 escolas da região de Santa Maria da Feira
 
 ### 🌐 Funcionalidades do Website
+
 - **Design Responsivo**: Adaptável a todos os dispositivos (desktop, tablet, mobile)
 - **Navegação Intuitiva**: Menu claro e organizado
 - **Informações Completas**: Detalhes sobre serviços, escolas e horários
@@ -19,6 +22,7 @@ Website institucional para o Centro de Actividades de Férias (CAF) da GRANDESAB
 - **Formulário de Contacto**: Comunicação direta com a instituição
 
 ### 📱 Páginas Principais
+
 - **Home**: Apresentação geral dos serviços
 - **CAF Santa Maria**: Informações detalhadas sobre o CAF principal
 - **Onde Estamos**: Localizações e mapas interativos
@@ -36,23 +40,27 @@ Website institucional para o Centro de Actividades de Férias (CAF) da GRANDESAB
 ## Instalação e Execução
 
 ### Pré-requisitos
+
 - Node.js (versão 16 ou superior)
 - npm ou yarn
 
 ### Passos para Instalação
 
 1. **Clonar o repositório**
+
    ```bash
    git clone https://github.com/[seu-usuario]/cafbygrandesabio.git
    cd cafbygrandesabio
    ```
 
 2. **Instalar dependências**
+
    ```bash
    npm install
    ```
 
 3. **Executar em modo de desenvolvimento**
+
    ```bash
    npm run dev
    ```
@@ -97,16 +105,19 @@ CAFBYGRANDESABIO/
 ### 🎯 Componentes Principais
 
 #### EscolasServico
+
 - Listagem de 34 escolas servidas
 - Grid responsivo 4→3→2→1 colunas
 - Integração com Google Maps por escola
 
 #### ContactForm
+
 - Formulário completo de contacto
 - Validação de campos
 - Design consistente com o tema
 
 #### GoogleMapsStreetView
+
 - Mapa interativo da localização principal
 - Informações de contacto organizadas
 - Layout responsivo
@@ -118,14 +129,3 @@ O projeto foi desenvolvido com abordagem mobile-first:
 - **Desktop (1200px+)**: Layout completo com 4 colunas
 - **Tablet (768px-1199px)**: 2-3 colunas, elementos adaptados
 - **Mobile (320px-767px)**: 1 coluna, navegação otimizada
-
-## Contacto
-
-**GRANDESABIO**
-- Email: geral@cafbygrandesabio.pt
-- Telefone: +351 256 123 456
-- Localização: Santa Maria da Feira, Portugal
-
----
-
-Desenvolvido com ❤️ para as famílias de Santa Maria da Feira
