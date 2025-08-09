@@ -129,3 +129,6 @@ O projeto foi desenvolvido com abordagem mobile-first:
 - **Desktop (1200px+)**: Layout completo com 4 colunas
 - **Tablet (768px-1199px)**: 2-3 colunas, elementos adaptados
 - **Mobile (320px-767px)**: 1 coluna, navegação otimizada
+
+---
+*Website atualizado e operacional - Deploy automático via GitHub Actions*
