@@ -7,6 +7,8 @@ import OndeEstamos from './pages/OndeEstamos'
 import Precarios from './pages/Precarios'
 import Contactos from './pages/Contactos'
 import CafSantaMaria from './pages/CafSantaMaria'
+import AreaPessoal from './pages/AreaPessoal'
+import TestConnection from './components/TestConnection'
 import LogotipoImage from './assets/Logotipo.png'
 import './App.css'
 
@@ -26,6 +28,8 @@ function App() {
             <Route path="/precarios" element={<Precarios />} />
             <Route path="/contactos" element={<Contactos />} />
             <Route path="/caf-santa-maria" element={<CafSantaMaria />} />
+            <Route path="/area-pessoal" element={<AreaPessoal />} />
+            <Route path="/test" element={<TestConnection />} />
           </Routes>
         </main>
         <Footer />

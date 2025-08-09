@@ -1,0 +1,265 @@
+.user-info-card {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.user-info-header {
+  margin-bott.photo-icon {
+  font-size: 4rem;
+  margin-bottom: 0.4rem;
+}
+
+.photo-text {
+  font-size: 1rem;
+  font-weight: 500;
+}m;
+}
+
+.user-info-header h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #3498db;
+  display: inline-block;
+}
+
+.user-info-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.info-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e6ed;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h3 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.personal-info {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+}
+
+.school-info {
+  background: linear-gradient(135deg, #e8f4fd 0%, #ffffff 100%);
+}
+
+/* Foto do Utilizador */
+.user-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  align-self: center;
+}
+
+.user-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #3498db;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.user-photo:hover {
+  transform: scale(1.05);
+}
+
+.user-photo-placeholder {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #bdc3c7, #95a5a6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #7f8c8d;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.photo-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.photo-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Container das informações do lado direito */
+.user-info-content {
+  flex: 1;
+  min-width: 0; /* Permite que o flex-item encolha */
+}
+
+/* Items de Informação */
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.info-item:hover {
+  background: rgba(52, 152, 219, 0.05);
+}
+
+.info-label {
+  font-weight: 600;
+  color: #34495e;
+  min-width: 140px;
+  font-size: 0.9rem;
+}
+
+.info-value {
+  color: #2c3e50;
+  text-align: left;
+  flex: 1;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-info-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .personal-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .user-photo-container {
+    margin-bottom: 0;
+  }
+  
+  .user-photo {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .user-photo-placeholder {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .photo-icon {
+    font-size: 2rem;
+  }
+  
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .info-label {
+    min-width: auto;
+  }
+  
+  .info-value {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-card {
+    padding: 1rem;
+  }
+  
+  .user-info-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .info-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .user-photo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .user-photo-placeholder {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .photo-icon {
+    font-size: 1.5rem;
+  }
+  
+  .photo-text {
+    font-size: 0.7rem;
+  }
+}
+
+/* Estilos específicos para o card de localização */
+.location-info {
+  grid-column: 1 / -1; /* Ocupa toda a largura da grid */
+  margin-top: 1rem;
+}
+
+/* Ajuste da grid para 3 cards em layouts maiores */
+@media (min-width: 1200px) {
+  .user-info-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  
+  .location-info {
+    grid-column: 1 / -1; /* Continua ocupando toda a largura */
+  }
+}
+
+/* Para tablets, manter layout em duas colunas para os primeiros cards */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .user-info-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+  
+  .location-info {
+    grid-column: 1 / -1;
+  }
+}

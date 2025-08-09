@@ -131,4 +131,5 @@ O projeto foi desenvolvido com abordagem mobile-first:
 - **Mobile (320px-767px)**: 1 coluna, navegação otimizada
 
 ---
-*Website atualizado e operacional - Deploy automático via GitHub Actions*
+
+_Website atualizado e operacional - Deploy automático via GitHub Actions_

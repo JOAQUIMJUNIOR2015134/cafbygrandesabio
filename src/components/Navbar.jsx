@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import UserAccess from './UserAccess';
 import './Navbar.css';
 
 const Navbar = ({ logo }) => {
@@ -37,6 +38,11 @@ const Navbar = ({ logo }) => {
             </Link>
           </li>
         </ul>
+
+        {/* User Access Component */}
+        <div className="navbar-user">
+          <UserAccess />
+        </div>
 
         {/* Mobile Menu Button (for future mobile implementation) */}
         <div className="navbar-toggle">

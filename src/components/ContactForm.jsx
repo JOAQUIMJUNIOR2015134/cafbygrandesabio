@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import apiService from '../services/apiService';
 import './ContactForm.css';
 
 const ContactForm = () => {
@@ -13,6 +14,28 @@ const ContactForm = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [escolas, setEscolas] = useState([]);
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  // Carregar escolas da base de dados
+  useEffect(() => {
+    const carregarEscolas = async () => {
+      try {
+        const escolasData = await apiService.listarEscolas();
+        setEscolas(escolasData);
+      } catch (error) {
+        console.error('Erro ao carregar escolas:', error);
+        // Fallback para escolas estáticas caso a API não esteja disponível
+        setEscolas([
+          { id: 1, nome: 'EB1 de Argoncilhe' },
+          { id: 2, nome: 'EB1 de Canedo' },
+          { id: 3, nome: 'EB1 de Santa Maria da Feira' },
+        ]);
+      }
+    };
+
+    carregarEscolas();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,10 +48,11 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage('');
 
     // Validação básica
     if (!formData.nomeAluno || !formData.numeroContribuinte || !formData.escola || !formData.anoEscolaridade || !formData.contactoMovel || !formData.email) {
-      alert('Por favor, preencha todos os campos obrigatórios.');
+      setSubmitMessage('Por favor, preencha todos os campos obrigatórios.');
       setIsSubmitting(false);
       return;
     }
@@ -36,7 +60,7 @@ const ContactForm = () => {
     // Validação de email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      alert('Por favor, insira um endereço de email válido.');
+      setSubmitMessage('Por favor, insira um endereço de email válido.');
       setIsSubmitting(false);
       return;
     }
@@ -44,22 +68,30 @@ const ContactForm = () => {
     // Validação de contacto móvel
     const phoneRegex = /^[0-9]{9}$/;
     if (!phoneRegex.test(formData.contactoMovel)) {
-      alert('Por favor, insira um número de contacto móvel válido (9 dígitos).');
+      setSubmitMessage('Por favor, insira um número de contacto móvel válido (9 dígitos).');
       setIsSubmitting(false);
       return;
     }
 
     try {
-      // Simular envio de email
-      // Em produção, você integraria com um serviço como EmailJS, Formspree, ou backend
-      console.log('Dados do formulário:', formData);
-      console.log('Email enviado para: caf.grandesabio@gmail.com');
+      // Preparar dados para a API
+      const dadosContacto = {
+        nome: formData.nomeAluno,
+        email: formData.email,
+        telefone: formData.contactoMovel,
+        escola: formData.escola,
+        idade_crianca: parseInt(formData.anoEscolaridade) || null,
+        mensagem: formData.mensagem || `Número de Contribuinte: ${formData.numeroContribuinte}`,
+        tipo_servico: 'Inscrição CAF'
+      };
 
-      // Simular delay de envio
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Enviar para a base de dados
+      const resultado = await apiService.criarContacto(dadosContacto);
+      
+      console.log('Contacto criado:', resultado);
 
       // Mostrar sucesso
-      alert('A sua mensagem foi enviada com sucesso! Entraremos em contacto em breve.');
+      setSubmitMessage('✅ A sua inscrição foi registada com sucesso! Entraremos em contacto em breve.');
 
       // Limpar formulário
       setFormData({
@@ -74,7 +106,7 @@ const ContactForm = () => {
 
     } catch (error) {
       console.error('Erro ao enviar:', error);
-      alert('Erro ao enviar mensagem. Tente novamente mais tarde.');
+      setSubmitMessage('❌ Erro ao registar inscrição. Tente novamente mais tarde ou contacte-nos diretamente.');
     } finally {
       setIsSubmitting(false);
     }
@@ -84,6 +116,13 @@ const ContactForm = () => {
     <div className="contact-form-container">
       <div className="contact-form-card">
         <h2 className="contact-form-title">Contacte-nos</h2>
+        
+        {/* Mensagem de feedback */}
+        {submitMessage && (
+          <div className={`submit-message ${submitMessage.includes('✅') ? 'success' : 'error'}`}>
+            {submitMessage}
+          </div>
+        )}
 
         <form onSubmit={handleSubmit} className="contact-form">
           
@@ -131,16 +170,21 @@ const ContactForm = () => {
                 <label htmlFor="escola" className="form-label">
                   Escola <span className="required">*</span>
                 </label>
-                <input
-                  type="text"
+                <select
                   id="escola"
                   name="escola"
                   value={formData.escola}
                   onChange={handleChange}
-                  className="form-input"
-                  placeholder="Digite o nome da escola"
+                  className="form-select"
                   required
-                />
+                >
+                  <option value="">Selecione a escola</option>
+                  {escolas.map(escola => (
+                    <option key={escola.id} value={escola.nome}>
+                      {escola.nome}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <div className="form-group">

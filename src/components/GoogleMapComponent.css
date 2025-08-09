@@ -1,0 +1,116 @@
+/* Estilos para o componente GoogleMapComponent */
+.google-map-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  position: relative;
+}
+
+/* Estados de carregamento */
+.map-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e9ecef;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.map-loading p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Estados de erro e placeholder */
+.map-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #495057;
+  text-align: center;
+  padding: 20px;
+  border: 2px dashed #dee2e6;
+}
+
+.error-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.map-error h4 {
+  margin: 10px 0;
+  color: #3498db;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.map-error p {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.api-key-info {
+  color: #6c757d !important;
+  font-style: italic;
+  margin-top: 10px !important;
+}
+
+.map-error small {
+  color: #868e96;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .google-map-container {
+    height: 250px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .google-map-container {
+    height: 200px;
+  }
+  
+  .loading-spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 2px;
+  }
+  
+  .map-loading p,
+  .map-error p {
+    font-size: 12px;
+  }
+  
+  .error-icon {
+    font-size: 24px;
+  }
+}
