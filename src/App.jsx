@@ -14,7 +14,7 @@ function App() {
   const logoUrl = "/vite.svg"; // Substitua pelo caminho do seu logo
 
   return (
-    <Router>
+    <Router basename="/cafbygrandesabio">
       <div className="App">
         <Navbar logo={logoUrl} />
         <main className="main-content">
