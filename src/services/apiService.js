@@ -18,6 +18,8 @@ class ApiService {
 
     try {
       console.log("🚀 Fazendo requisição para:", url);
+      console.log("🔧 Configuração:", config);
+      
       const response = await fetch(url, config);
 
       console.log(
@@ -40,7 +42,10 @@ class ApiService {
       console.error("❌ Erro na requisição:", error);
 
       // Verificar se é erro de rede
-      if (error instanceof TypeError && error.message.includes("fetch")) {
+      if (error.name === 'TypeError' || 
+          error.message.includes('Failed to fetch') ||
+          error.message.includes('Network error') ||
+          error.message.includes('fetch is not defined')) {
         throw new Error(
           "Erro de conexão. Verifique se o servidor está funcionando."
         );

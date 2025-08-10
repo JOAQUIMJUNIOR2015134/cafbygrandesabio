@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste API</title>
+</head>
+<body>
+    <h1>Teste de Conexão API</h1>
+    <button onclick="testarAPI()">Testar Conexão</button>
+    <button onclick="testarLogin()">Testar Login</button>
+    <div id="resultado"></div>
+
+    <script>
+        async function testarAPI() {
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = 'Testando...';
+            
+            try {
+                const response = await fetch('http://localhost:3001/api/test');
+                const data = await response.json();
+                resultado.innerHTML = `<p style="color: green;">✅ Sucesso: ${JSON.stringify(data)}</p>`;
+            } catch (error) {
+                resultado.innerHTML = `<p style="color: red;">❌ Erro: ${error.message}</p>`;
+            }
+        }
+
+        async function testarLogin() {
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = 'Testando login...';
+            
+            try {
+                const response = await fetch('http://localhost:3001/api/utilizadores/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: 'ana.silva@email.com',
+                        contribuinte: '123456789'
+                    })
+                });
+                
+                const data = await response.json();
+                resultado.innerHTML = `<p style="color: green;">✅ Login sucesso: ${JSON.stringify(data)}</p>`;
+            } catch (error) {
+                resultado.innerHTML = `<p style="color: red;">❌ Erro de login: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

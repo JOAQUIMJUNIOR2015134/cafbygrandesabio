@@ -4,7 +4,10 @@
 }
 
 .user-info-header {
-  margin-bott.photo-icon {
+  margin-bottom: 1rem;
+}
+
+.photo-icon {
   font-size: 4rem;
   margin-bottom: 0.4rem;
 }
@@ -12,7 +15,6 @@
 .photo-text {
   font-size: 1rem;
   font-weight: 500;
-}m;
 }
 
 .user-info-header h2 {

@@ -80,8 +80,12 @@ const UserAccess = () => {
     }
 
     try {
+      console.log('🔐 Tentando fazer login com:', { email: formData.email, contribuinte: formData.contribuinte });
+      
       // Chamar API para verificar credenciais
       const resultado = await apiService.loginUtilizador(formData.email, formData.contribuinte);
+      
+      console.log('✅ Resultado do login:', resultado);
       
       if (resultado.success) {
         setMessage(`Bem-vindo, ${resultado.utilizador.nome}! Redirecionando...`);
@@ -101,6 +105,9 @@ const UserAccess = () => {
 
     } catch (error) {
       console.error('❌ Erro de autenticação:', error);
+      console.error('❌ Tipo do erro:', typeof error);
+      console.error('❌ Nome do erro:', error.name);
+      console.error('❌ Mensagem:', error.message);
       
       // Tratamento específico de diferentes tipos de erro
       if (error.message.includes('conexão') || error.message.includes('fetch')) {
