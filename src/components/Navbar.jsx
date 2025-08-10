@@ -28,11 +28,6 @@ const Navbar = ({ logo }) => {
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to="/precarios" className="navbar-link">
-              Preçários
-            </Link>
-          </li>
-          <li className="navbar-item">
             <Link to="/contactos" className="navbar-link">
               Contactos
             </Link>

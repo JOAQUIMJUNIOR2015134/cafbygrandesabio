@@ -4,6 +4,12 @@ import CafInfoCard from '../components/CafInfoCard';
 import ReusableCard from '../components/ReusableCard';
 import ContactForm from '../components/ContactForm';
 import '../styles/ResponsiveGrid.css';
+import heroImage from '../assets/HeroSection/8.png';
+import cafInfoImage from '../assets/CAF_INFO.png';
+import cafSantaMariaImage from '../assets/CAF_Pages/CAF_Santa Maria da Feira.jpg';
+import cafOvarImage from '../assets/CAF_Pages/CAF_OVAR.jpg';
+import cafEsmorizImage from '../assets/CAF_Pages/CAF_Esmoriz.jpg';
+import gpsImage from '../assets/CAF_Pages/CAF_GPS.jpeg';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -41,13 +47,13 @@ const Home = () => {
     <div className="page-container">
       
       <HeroSection 
-        image="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        image={heroImage}
         onInscrever={handleInscrever}
         onSaberMais={handleSaberMais}
       />
 
       <CafInfoCard 
-        image="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+        image={cafInfoImage}
         title="CAF_Santa Maria da Feira"
       />
 
@@ -58,7 +64,7 @@ const Home = () => {
         </h2>
         <div className="services-grid">
           <ReusableCard
-            image="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2022&q=80"
+            image={cafSantaMariaImage}
             title="CAF_Santa Maria da Feira"
             description="Desenvolvemos atividades físicas e desportivas adequadas a todas as idades, promovendo o bem-estar e a socialização."
             button1Text="Saber Mais"
@@ -68,7 +74,7 @@ const Home = () => {
           />
 
           <ReusableCard
-            image="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            image={cafOvarImage}
             title="CAF_Ovar"
             description="Oficinas de artes plásticas, música e expressão criativa para estimular a imaginação e desenvolver talentos."
             button1Text="Saber Mais"
@@ -78,7 +84,7 @@ const Home = () => {
           />
 
           <ReusableCard
-            image="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+            image={cafEsmorizImage}
             title="CAF_Esmoriz"
             description="Passeios e atividades ao ar livre para conectar as crianças com a natureza e promover a consciência ambiental."
             button1Text="Saber Mais"
@@ -88,7 +94,7 @@ const Home = () => {
           />
 
           <ReusableCard
-            image="https://images.unsplash.com/photo-1587691592099-24045742c181?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80"
+            image={gpsImage}
             title="GPS_Gosto pelo Saber"
             description="Dinâmicas de grupo e jogos educativos que estimulam o raciocínio lógico e promovem o trabalho em equipa."
             button1Text="Saber Mais"

@@ -104,25 +104,25 @@
 }
 
 .reusable-card-btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #00b7ff 0%, #00b7ff 100%);
   color: rgb(255, 255, 255);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .reusable-card-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .reusable-card-btn-secondary {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #00b7ff 0%, #00b7ff 100%);
   color: white;
-  box-shadow: 0 5px 15px rgba(240, 147, 251, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .reusable-card-btn-secondary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(240, 147, 251, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Card Variants */
